@@ -2,7 +2,8 @@
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
-- github/workflows/main.yml - The file contain the setup for github actions pipeline
+- github/workflows/main.yml - The file contain the setup for github actions prod pipeline
+- github/workflows/dev.yml - The file contain the setup for github actions for dev pipeline
 - sam_vana/api_publico - Code for the application's Lambda function provided by Vana
 - events/event.json - Invocation events that you can use to invoke the function.
 - tests/unit - Unit tests for the application code.
