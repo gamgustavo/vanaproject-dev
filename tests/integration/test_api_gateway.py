@@ -43,4 +43,6 @@ class TestApiGateway:
 
 
         assert response.status_code == 200
-        assert response.json() == {"message": "hello world"}
+        print(response.json())
+        assert "Hola desde AWS Lambda! Mi nombre es" in response.json() 
+
