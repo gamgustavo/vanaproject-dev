@@ -30,6 +30,9 @@ jobs:
         env:
           SAM_CLI_INSTALL_VERSION: latest
 
+      - name: Clean Resources
+        run: sam delete --no-prompts
+
       - name: Build and package SAM application
         run: sam build --template-file template.yaml
 
