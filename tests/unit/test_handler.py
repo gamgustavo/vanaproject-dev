@@ -68,5 +68,4 @@ def test_lambda_handler(apigw_event):
     data = json.loads(ret["body"])
 
     assert ret["statusCode"] == 200
-    assert "message" in ret["body"]
     assert "Hola desde AWS Lambda! Mi nombre es" in data["message"]
