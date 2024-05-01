@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from sam_vana import app
+from sam_vana import api_publico
 
 
 @pytest.fixture()
@@ -64,7 +64,7 @@ def apigw_event():
 
 def test_lambda_handler(apigw_event):
 
-    ret = app.lambda_handler(apigw_event, "")
+    ret = api_publico.lambda_handler(apigw_event, "")
     data = json.loads(ret["body"])
 
     print(data)
