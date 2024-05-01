@@ -19,7 +19,11 @@ This project contains source code and supporting files for a serverless applicat
 - AWS CLI logged in environment
 - Setup github secrets for: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
-## Deploy the sample application
+## Devops Pipeline
+
+![Pipeline](/img/vana-pipeline.png "Pipeline")
+
+## Deploy the application
 
 To build and deploy the application for the first time, run the following in your shell:
 
