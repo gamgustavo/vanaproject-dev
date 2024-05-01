@@ -3,7 +3,7 @@ name: Deploy Lambda Function
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   deploy:
@@ -17,9 +17,9 @@ jobs:
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
-          aws-region: ${{ secrets.REGION_PROD }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_DEV }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
+          aws-region: ${{ secrets.REGION_DEV }}
 
       - name: Install AWS SAM CLI
         run: |
@@ -29,6 +29,9 @@ jobs:
           sam --version
         env:
           SAM_CLI_INSTALL_VERSION: latest
+
+      - name: Clean Resources
+        run: sam delete --no-prompts
 
       - name: Build and package SAM application
         run: sam build --template-file template.yaml
