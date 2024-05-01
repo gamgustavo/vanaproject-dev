@@ -23,9 +23,10 @@ jobs:
 
       - name: Install AWS SAM CLI
         run: |
-          curl -o sam-installation-script.sh https://raw.githubusercontent.com/aws/aws-sam-cli/main/installation.yaml
-          chmod +x sam-installation-script.sh
-          ./sam-installation-script.sh --skip-pip-installation
+          wget https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-arm64.zip
+          unzip aws-sam-cli-linux-arm64.zip -d sam-installation
+          sudo ./sam-installation/install
+          sam --version
         env:
           SAM_CLI_INSTALL_VERSION: latest
 
