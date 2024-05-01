@@ -21,9 +21,9 @@ This project contains source code and supporting files for a serverless applicat
 
 ## Devops Pipeline
 
-![Pipeline](/img/vana-pipeline.png "Pipeline"))
+![Pipeline](/img/vana-pipeline.png "Pipeline")
 
-## Deploy the sample application
+## Deploy the application
 
 To build and deploy the application for the first time, run the following in your shell:
 
